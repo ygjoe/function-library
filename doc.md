@@ -9,6 +9,7 @@ isMobile: // 移动端
 isPC: // pc端
 
 // 函数 fl.isPhone(data)
+// 注意：科学计数法未做严格判断，也属于数字中
 isPhone // 手机号
 isCommon // 非特殊字符，数字、字母、下划线
 isUsername // 用户名，英文字母开头，数字、字母、下划线

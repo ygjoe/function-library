@@ -26,6 +26,10 @@ const judge = {
   isIDCard: function (IDCard) {
     return /^[1-9]\d{5}(18|19|([23]\d))\d{2}((0[1-9])|(10|11|12))(([0-2][1-9])|10|20|30|31)\d{3}[0-9Xx]$/.test(IDCard)
   },
+  // 短信验证码，正整数6位
+  isMesCode: function (num) {
+    return /^[\d]{6}$/.test(num)
+  },
   // 正整数
   isPosInt: function (num) {
     return /^\d+$/.test(num)
