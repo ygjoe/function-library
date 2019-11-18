@@ -1,7 +1,7 @@
 {
   "name": "function-library",
-  "version": "1.0.2",
-  "description": "自用函数库",
+  "version": "1.0.1",
+  "description": "常用函数库",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --config webpack.dev.config.js",
@@ -12,7 +12,7 @@
     "url": "git+https://github.com/ygjoe/function-library.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "ygjoe",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ygjoe/function-library/issues"
