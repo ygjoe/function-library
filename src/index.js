@@ -1,4 +1,7 @@
-import '@/css/base.scss'
 import judge from '@/js/judge'
 
-console.log(judge.isMesCode(2E5))
+const fl = {
+  ...judge
+}
+
+export default fl
