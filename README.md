@@ -15,7 +15,9 @@ import 'function-library/dist/base.css'
 ```
 
 #### 目录
+```$xslt
 |__ css // 样式  
-&emsp; |__ base.scss // 样式初始化  
+   |__ base.scss // 样式初始化  
 |__ js // 方法  
-&emsp; |__ judge.js // 判断
+   |__ judge.js // 判断
+```
