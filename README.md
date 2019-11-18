@@ -1,9 +1,7 @@
 ### function-library
-<p align="center">
-<a href="https://www.npmjs.com/package/function-library"><img src="https://img.shields.io/npm/v/function-library.svg" alt="Version"></a>  
-<a href="https://www.npmjs.com
-/package/function-library"><img src="https://img.shields.io/npm/l/function-library.svg" alt="License"></a>
-</p>
+<a href="https://www.npmjs.com/package/function-library"><img src="https://img.shields.io/npm/v/function-library.svg" alt="Version"></a>
+<a href="https://www.npmjs.com/package/function-library"><img src="https://img.shields.io/npm/l/function-library.svg" alt="License"></a>
+
 #### 简介
 自用函数库
 
