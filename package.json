@@ -1,12 +1,12 @@
 {
   "name": "function-library",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "常用函数库",
   "main": "dist/index.js",
   "scripts": {
     "start": "webpack-dev-server --config webpack.dev.config.js",
     "build": "webpack",
-    "publish": "npm version patch && npm run build && nrm use npm && npm publish && nrm use taobao"
+    "npm:publish": "npm version patch && npm run build && npm publish --registry http://registry.npmjs.org"
   },
   "repository": {
     "type": "git",
