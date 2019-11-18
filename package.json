@@ -2,7 +2,7 @@
   "name": "function-library",
   "version": "1.0.3",
   "description": "常用函数库",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "start": "webpack-dev-server --config webpack.dev.config.js",
     "build": "webpack",

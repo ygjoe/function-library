@@ -11,7 +11,7 @@ import fl from 'function-library'
 
 
 // 加入初始化样式
-import 'function-library/lib/css/base.css'
+import 'function-library/dist/css/base.css'
 ```
 
 #### 目录

@@ -10,9 +10,6 @@ package-lock.json
 .vscode
 .project
 
-# production
-dist
-
 # misc
 .DS_Store
 
