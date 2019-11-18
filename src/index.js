@@ -1,3 +1,3 @@
 import '@/css/base.scss'
 
-import device from '@/js/device'
+import judge from '@/js/judge'
