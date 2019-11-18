@@ -10,7 +10,9 @@ module.exports = {
   output: {
     path: outPath,
     filename: 'index.js',
+    libraryTarget: 'umd',
     library: 'fl'
+
   },
   resolve: {
     alias: {
