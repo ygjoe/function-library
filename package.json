@@ -1,12 +1,11 @@
 {
   "name": "function-library",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "常用函数库",
   "main": "dist/index.js",
   "scripts": {
     "start": "webpack-dev-server --config webpack.dev.config.js",
-    "build": "webpack",
-    "publish": "npm version patch && npm publish --registry http://registry.npmjs.org"
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
