@@ -22,4 +22,5 @@ import 'function-library/dist/css/base.css'
    |__ base.scss // 样式初始化  
 |__ js // 方法  
    |__ judge.js // 判断
+   |__ format.js // 格式化
 ```

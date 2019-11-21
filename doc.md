@@ -1,12 +1,12 @@
-#### is // 判断相关
+#### judge // 判断相关
 ```$xslt
 // 变量 fl.isIOS
 isIOS // ios
 isAndroid // android
-isWX: // 微信内置浏览器
-isQQ: // QQ年内置浏览器
-isMobile: // 移动端
-isPC: // pc端
+isWX // 微信内置浏览器
+isQQ // QQ年内置浏览器
+isMobile // 移动端
+isPC // pc端
 
 // 函数 fl.isPhone(data)
 // 注意：科学计数法未做严格判断，也属于数字中
@@ -22,4 +22,15 @@ isNeg // 负数
 isNum // 正负数字
 isEMail // email
 isChinese // 中文
+```
+
+#### format // 格式化相关
+```$xslt
+parse // url参数转obj对象
+parse(params) // params会判断去除开头的'?'，并执行一次decodeURIComponent方法 
+
+----------------
+stringify // obj对象转url参数，开头无'?'
+stringify(obj)
+
 ```

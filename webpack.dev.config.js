@@ -59,7 +59,6 @@ module.exports = {
     ]
   },
   plugins: [
-    new CleanWebpackPlugin(),
     new ExtractTextPlugin('css/base.css'),
     new HtmlWebpackPlugin({
       filename: 'index.html',
