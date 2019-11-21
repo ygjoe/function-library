@@ -30,6 +30,15 @@ const format = {
       result.append(key, data[key])
     }
     return result
+  },
+  // 金额格式化 xx,xxx,xxx,xxx.00
+  fmAmount: function (amount) {
+    let data = amount.toString()
+    let result = ''
+    let arr = data.split('.')
+    arr[0] = arr[0].replace(/\d{1,3}(?=(\d{3})+?$)/g, '$&,')
+    result = arr.join('.')
+    return result
   }
 }
 

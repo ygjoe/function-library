@@ -35,5 +35,10 @@ stringify(obj) // 输入url参数开头无'?'，未经过encode
 
 ----------------
 formData // obj对象转FormData
-formData(obj)
+formData(obj) 
+
+----------------
+fmAmount // 金额格式化，千分位，xx,xxx,xxx.xx
+fmAmount(amount) // amount是number类型的话，请勿使用科学计数法，未对小数做处理
+
 ```
