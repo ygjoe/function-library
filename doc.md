@@ -27,10 +27,10 @@ isChinese // 中文
 #### format // 格式化相关
 ```$xslt
 parse // url参数转obj对象
-parse(params) // params会判断去除开头的'?'，并执行一次decodeURIComponent方法 
+parse(params) // params在函数内会判断去除开头的'?'，并执行一次decodeURIComponent方法 
 
 ----------------
-stringify // obj对象转url参数，开头无'?'
-stringify(obj)
+stringify // obj对象转url参数
+stringify(obj) // 输入url参数开头无'?'，未经过encode
 
 ```

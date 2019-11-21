@@ -13,10 +13,14 @@ const format = {
     return result
   },
   // obj转url参数
-  stringify: function (data) {
-
+  stringify: function (obj) {
+    let data = obj
+    let result = []
+    for (let key in data) {
+      result.push(`${key}=${data[key]}`)
+    }
+    result = result.join('&')
+    return result
   }
 }
-format.parse(window.location.search)
-format.parse('1=a&2=b&3=c&4&5=&6=你好呀')
 export default format
