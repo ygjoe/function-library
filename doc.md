@@ -33,4 +33,7 @@ parse(params) // params在函数内会判断去除开头的'?'，并执行一次
 stringify // obj对象转url参数
 stringify(obj) // 输入url参数开头无'?'，未经过encode
 
+----------------
+formData // obj对象转FormData
+formData(obj)
 ```

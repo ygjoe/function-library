@@ -21,6 +21,16 @@ const format = {
     }
     result = result.join('&')
     return result
+  },
+  // obj转FormData
+  formData: function (obj) {
+    let data = obj
+    let result = new FormData()
+    for (let key in data) {
+      result.append(key, data[key])
+    }
+    return result
   }
 }
+
 export default format
