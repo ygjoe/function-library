@@ -1,6 +1,6 @@
 {
   "name": "function-library",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "常用函数库",
   "main": "dist/index.js",
   "scripts": {
