@@ -23,4 +23,5 @@ import 'function-library/dist/css/base.css'
 |__ js // 方法  
    |__ judge.js // 判断
    |__ format.js // 格式化
+   |__ imgLazyLoad.js // 图片懒加载
 ```

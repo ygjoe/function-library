@@ -42,3 +42,26 @@ fmAmount // 金额格式化，千分位，xx,xxx,xxx.xx
 fmAmount(amount) // amount是number类型的话，请勿使用科学计数法，未对小数做处理
 
 ```
+
+#### imgLazyLoad // 图片懒加载
+```$xslt
+// 滚动监听的是window
+// 懒加载判断条件是 img.left - options.right <= window.innerWidth && img.top - options.bottom <= window.innerHeight
+
+// html
+<img fl-imgLazy = "url">
+
+// js
+imgLazyLoad( {options} )
+```
+options  
+
+ 参数 | 说明 | 类型 | 默认值
+ --- | --- | --- | ---
+default | 默认图片 | url | 
+bottom | img距离底边多少 | 数字，正负皆可 | 0
+right | img距离右边多少加载 | 数字，正负皆可 | 0
+errorMax | img.onerror最大错误次数 | 数字，正整数 | 2
+error | 错误图片 | url |
+
+
