@@ -68,7 +68,7 @@ function bgLazyLoad () {
   getBgArr()
   if (bgArr.length - 1 >= bgIndex) {
     bgArr.slice(bgIndex).forEach(function (item, index) {
-      item.style.backgroundImage = options.default
+      item.style.backgroundImage = `url(${options.default})`
       const src = item.getAttribute('fl-img-lazy')
       if (src) {
         const { left, top } = item.getBoundingClientRect()
@@ -76,15 +76,15 @@ function bgLazyLoad () {
           let error = 0
           const img = new Image()
           img.src = src
-          item.style.backgroundImage = src
+          item.style.backgroundImage = `url(${src})`
           img.onerror = function () {
-            item.style.backgroundImage = options.error
+            item.style.backgroundImage = `url(${options.error})`
             error += 1
             if (error >= options.errorMax) {
               img.onerror = null
             }
           }
-          imgIndex++
+          bgIndex++
         }
       }
     })
