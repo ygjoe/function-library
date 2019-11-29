@@ -43,7 +43,7 @@ function imgLazyLoad () {
   if (imgArr.length - 1 >= imgIndex) {
     imgArr.slice(imgIndex).forEach(function (item, index) {
       item.src = options.default
-      const src = item.getAttribute('fl-imgLazy')
+      const src = item.getAttribute('fl-img-lazy')
       if (src) {
         const { left, top } = item.getBoundingClientRect()
         if (left - options.right <= window.innerWidth && top - options.bottom <= window.innerHeight && item.src !== src) {
@@ -69,7 +69,7 @@ function bgLazyLoad () {
   if (bgArr.length - 1 >= bgIndex) {
     bgArr.slice(bgIndex).forEach(function (item, index) {
       item.style.backgroundImage = options.default
-      const src = item.getAttribute('fl-imgLazy')
+      const src = item.getAttribute('fl-img-lazy')
       if (src) {
         const { left, top } = item.getBoundingClientRect()
         if (left - options.right <= window.innerWidth && top - options.bottom <= window.innerHeight && item.src !== src) {

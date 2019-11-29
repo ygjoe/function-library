@@ -49,10 +49,10 @@ fmAmount(amount) // amount是number类型的话，请勿使用科学计数法，
 // 懒加载判断条件是 img.left - options.right <= window.innerWidth && img.top - options.bottom <= window.innerHeight
 
 // img html
-<img fl-imgLazy = "url">
+<img fl-img-lazy = "url">
 
 // 背景图片 html
-<div class = "fl-bg-lazy" fl-imgLazy = "url"></div>
+<div class = "fl-bg-lazy" fl-img-lazy = "url"></div>
 
 // js
 imgLazyLoad( {options} )
