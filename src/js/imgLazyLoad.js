@@ -27,12 +27,12 @@ function getDefaultError (src) {
 }
 
 // 设置自定义配置项
-function setOption (option) {
+function setOption (option = {}) {
   options = { ...options, ...option }
-  if (option.default) {
+  if (options.default) {
     getDefaultError(option.default)
   }
-  if (option.error) {
+  if (options.error) {
     getDefaultError(option.error)
   }
 }
