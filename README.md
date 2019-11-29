@@ -24,4 +24,5 @@ import 'function-library/dist/css/base.css'
    |__ judge.js // 判断
    |__ format.js // 格式化
    |__ imgLazyLoad.js // 图片懒加载
+   |__ getMoreLoad.js // 滑动加载更多，上滑、左滑
 ```
