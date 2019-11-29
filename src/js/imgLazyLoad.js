@@ -1,5 +1,7 @@
 let imgArr = [] // img dom元素数组
 let imgIndex = 0 // 当前img懒加载的下标
+let bgArr = [] // 背景图片 dom元素数组
+let bgIndex = 0 // 当前背景图片懒加载的下标
 let options = {
   default: '', // 默认图片
   bottom: 0, // img距离底边多少加载
@@ -12,7 +14,9 @@ let options = {
 function init (option) {
   setOption(option)
   getImgArr()
+  getBgArr()
   imgLazyLoad()
+  bgLazyLoad()
   addListenerScroll()
 }
 
@@ -59,6 +63,34 @@ function imgLazyLoad () {
   }
 }
 
+// 背景图片懒加载
+function bgLazyLoad () {
+  getBgArr()
+  if (bgArr.length - 1 >= bgIndex) {
+    bgArr.slice(bgIndex).forEach(function (item, index) {
+      item.style.backgroundImage = options.default
+      const src = item.getAttribute('fl-imgLazy')
+      if (src) {
+        const { left, top } = item.getBoundingClientRect()
+        if (left - options.right <= window.innerWidth && top - options.bottom <= window.innerHeight && item.src !== src) {
+          let error = 0
+          const img = new Image()
+          img.src = src
+          item.style.backgroundImage = src
+          img.onerror = function () {
+            item.style.backgroundImage = options.error
+            error += 1
+            if (error >= options.errorMax) {
+              img.onerror = null
+            }
+          }
+          imgIndex++
+        }
+      }
+    })
+  }
+}
+
 // 获取img集合
 function getImgArr () {
   if (imgArr.length - 1 <= imgIndex) {
@@ -66,9 +98,17 @@ function getImgArr () {
   }
 }
 
+// 获取bg集合
+function getBgArr () {
+  if (bgArr.length - 1 <= bgIndex) {
+    bgArr = Array.prototype.slice.call(document.getElementsByClassName('fl-bg-lazy') || [])
+  }
+}
+
 // 监听滚动
 function addListenerScroll () {
   window.addEventListener('scroll', imgLazyLoad)
+  window.addEventListener('scroll', bgLazyLoad)
 }
 
 export default init

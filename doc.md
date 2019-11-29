@@ -43,13 +43,16 @@ fmAmount(amount) // amount是number类型的话，请勿使用科学计数法，
 
 ```
 
-#### imgLazyLoad // 图片懒加载
+#### imgLazyLoad // 图片懒加载，背景图片懒加载
 ```$xslt
 // 滚动监听的是window
 // 懒加载判断条件是 img.left - options.right <= window.innerWidth && img.top - options.bottom <= window.innerHeight
 
-// html
+// img html
 <img fl-imgLazy = "url">
+
+// 背景图片 html
+<div class = "fl-bg-lazy" fl-imgLazy = "url"></div>
 
 // js
 imgLazyLoad( {options} )
