@@ -1,5 +1,5 @@
-let imgArr = []
-let imgIndex = 0
+let imgArr = [] // img dom元素数组
+let imgIndex = 0 // 当前img懒加载的下标
 let options = {
   default: '', // 默认图片
   bottom: 0, // img距离底边多少加载
