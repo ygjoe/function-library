@@ -67,4 +67,19 @@ right | img距离右边多少加载 | 数字，正负皆可 | 0
 errorMax | img.onerror最大错误次数 | 数字，正整数 | 2
 error | 错误图片 | url |
 
+#### getMoreLoad // 滑动加载
+```$xslt
+// 默认滚动监听window
+// 滑动判断条件 
+// 上滑 scrollHeight - scrollTop - options.distance <= height
+// 左滑 scrollWidth - scrollLeft - options.distance <= width
 
+// 调用
+getMoreLoad( {options} )
+```
+ 参数 | 说明 | 类型 | 默认值
+ --- | --- | --- | ---
+dom | scroll监听dom对象 | dom对象 | window 
+model | 滑动方向 | string: 'left、top' | 'top'
+distance | 距离边缘的距离触发回调函数 | 数字，正负皆可 | 0
+callback | 滑动到末尾回调函数 | function | () => {}
