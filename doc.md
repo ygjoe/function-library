@@ -41,6 +41,10 @@ formData(obj)
 fmAmount // 金额格式化，千分位，xx,xxx,xxx.xx
 fmAmount(amount) // amount是number类型的话，请勿使用科学计数法，未对小数做处理
 
+----------------
+toFixed // 浮点数精度丢失修复;默认四舍五入到整数;
+toFixed(num, fixed) // num数值，fixed保留小数位数默认0
+
 ```
 
 #### imgLazyLoad // 图片懒加载，背景图片懒加载
