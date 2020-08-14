@@ -82,6 +82,20 @@ const format = {
   fmTimeToMillisecond: function (time) {
     return new Date(time.replace(/-/g, '/')).getTime()
   },
+  // 返回倒计时格式，
+  // params time = 毫秒
+  // return object = { d, h, m, s, ms } 天时分秒毫秒
+  fmTimeCountdown: function (time = 0) {
+    let d = Math.floor(time / 1000 / 60 / 60 / 24)
+    let h = Math.floor(time / 1000 / 60 / 60 % 24)
+    let m = Math.floor(time / 1000 / 60 % 60)
+    let s = Math.floor(time / 1000 % 60)
+    h = h < 10 ? '0' + h : h
+    m = m < 10 ? '0' + m : m
+    s = s < 10 ? '0' + s : s
+
+    return { d, h, m, s }
+  },
 }
 
 export default format
