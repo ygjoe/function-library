@@ -73,7 +73,15 @@ const format = {
     result = result / Math.pow(10, f)    //整数字符串转成浮点数
     result = toFixed(result, f)  //递归执行避免精度丢失
     return result
-  }
+  },
+  // 接口返回时间转成ios、android通用，'2020-02-02 02:02:02' to '2020/02/02 02:02:02'
+  fmTimeToAndroidIos: function (time) {
+    return time.replace(/-/g, '/')
+  },
+  // 年月日转毫秒 time = new Date() 可转换格式，例如：'2020-02-02 02:02:02' ||  '2020/02/0202:02:02'
+  fmTimeToMillisecond: function (time) {
+    return new Date(time.replace(/-/g, '/')).getTime()
+  },
 }
 
 export default format
