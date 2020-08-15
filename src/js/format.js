@@ -96,6 +96,23 @@ const format = {
 
     return { d, h, m, s }
   },
+  // 返回年月日时分秒
+  // params time = Number毫秒 || time = String '0000-00-00 00:00:00' ||
+  // time = New Date()
+  // return object = { y, m, d, h, mu, s, ms} String 年月日时分秒
+  fmTimeDate: function (time = new Date()) {
+    let setString = num => num < 10 ? '0' + num : num.toString()
+    let t = time.toString().replace(/-/g, '/')
+    let date = new Date(t)
+    let y = setString(date.getFullYear())
+    let m = setString(date.getMonth() + 1)
+    let d = setString(date.getDate())
+    let h = setString(date.getHours())
+    let mu = setString(date.getMinutes())
+    let s = setString(date.getSeconds())
+
+    return { y, m, d, h, mu, s, ms }
+  },
 }
 
 export default format
