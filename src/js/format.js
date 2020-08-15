@@ -40,7 +40,28 @@ const format = {
     result = arr.join('.')
     return result
   },
-  // toFixed 浮点数精度丢失修复;默认四舍五入到整数;
+  // 金额格式化输出整数和小数
+  // params amount = 0，金额 Number || String；toFixed = 2，保留小数位数 Number || String
+  // return [String=整数,String=小数]
+  fmAmountToArray: function (amount = 0, toFixed = 2) {
+    let a = amount.toString().split('.')
+    let a0 = a[0] || '0'
+    let a1 = a[1] || '0'
+    let integer = a0
+    let decimals = ''
+    let a1Length = a1.split('').length
+    if (a1Length < toFixed) {
+      decimals = a1 * Math.pow(10, toFixed - a1Length) + ''
+    }
+    if (a1Length == toFixed) {
+      decimals = a1
+    }
+    if (a1Length > toFixed) {
+      decimals = (a1 / Math.pow(10, a1Length - toFixed)).toFixed(0)
+    }
+
+    return [integer, decimals]
+  },
   toFixed: function (num, fixed = 0) {
     if (!Number(num)) {
       return console.error('toFixed(num,fixed):num is not number')
@@ -101,7 +122,10 @@ const format = {
   // time = New Date()
   // return object = { y, m, d, h, mu, s, ms} String 年月日时分秒
   fmTimeDate: function (time = new Date()) {
-    let setString = num => num < 10 ? '0' + num : num.toString()
+    function setString (num) {
+      return num < 10 ? '0' + num : num.toString()
+    }
+
     let t = time.toString().replace(/-/g, '/')
     let date = new Date(t)
     let y = setString(date.getFullYear())
