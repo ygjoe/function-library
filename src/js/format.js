@@ -84,7 +84,7 @@ const format = {
   },
   // 返回倒计时格式，
   // params time = 毫秒
-  // return object = { d, h, m, s, ms } 天时分秒毫秒
+  // return object = { d, h, m, s, ms } 天时分秒
   fmTimeCountdown: function (time = 0) {
     let d = Math.floor(time / 1000 / 60 / 60 / 24)
     let h = Math.floor(time / 1000 / 60 / 60 % 24)
